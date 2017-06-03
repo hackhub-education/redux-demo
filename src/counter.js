@@ -14,9 +14,9 @@ class Counter extends Component {
     return (
       <div className="Counter">
           <h3>Child Component</h3>
-          <p>Current counter is : {this.state.count}</p>
+          <p>Current counter is : {this.props.counter}</p>
           <button 
-            onClick={()=>{this.setState({count: this.state.count + 1})}}
+            onClick={()=>{}}
             >
             +1 
           </button>

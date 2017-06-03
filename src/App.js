@@ -4,6 +4,13 @@ import './App.css';
 import Counter from './counter';
 
 class App extends Component {
+  constructor(props){
+      super(props);
+      this.state = {
+          count: 0
+      }
+  }
+
   render() {
     return (
       <div className="App">
@@ -12,7 +19,9 @@ class App extends Component {
           <h2>Welcome to Redux Intro</h2>
         </div>
         <h3>Parent Component</h3>
-        <Counter />
+        <Counter 
+          counter={this.state.count} 
+        />
       </div>
     );
   }
