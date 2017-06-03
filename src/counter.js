@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 import store from './store';
 
@@ -12,7 +13,7 @@ class Counter extends Component {
     return (
       <div className="Counter">
           <h3>Child Component</h3>
-          <p>Current counter is : {store.getState()}</p>
+          <p>Current counter is : {this.props.counter}</p>
           <button
             onClick={()=>{
                 this.addCounter();
@@ -25,4 +26,8 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+function mapStateToProps(store) {
+    return { counter: store };
+}
+
+export default connect(mapStateToProps)(Counter);
