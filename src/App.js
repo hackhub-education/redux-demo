@@ -6,6 +6,10 @@ import store from './store';
 import Counter from './counter';
 
 class App extends Component {
+   addCounter = () => {
+     store.dispatch({type: 'ADD'});
+ }
+
   render() {
     return (
       <Provider store={store}>
@@ -15,6 +19,9 @@ class App extends Component {
             <h2>Welcome to Redux Intro</h2>
           </div>
           <h3>Parent Component</h3>
+          <button onClick={()=>{this.addCounter()}}>
+            +1 
+          </button>
           <Counter />
         </div>
       </Provider>
