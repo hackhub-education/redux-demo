@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Counter from './counter';
 
 class App extends Component {
   render() {
@@ -10,6 +11,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Redux Intro</h2>
         </div>
+        <h3>Parent Component</h3>
+        <Counter />
       </div>
     );
   }
