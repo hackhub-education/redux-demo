@@ -21,6 +21,7 @@ class App extends Component {
         <h3>Parent Component</h3>
         <Counter 
           counter={this.state.count} 
+          clickBtn={()=>{this.setState({count: this.state.count+1})}}
         />
       </div>
     );
