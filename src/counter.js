@@ -6,7 +6,10 @@ import store from './store';
 class Counter extends Component {
  addCounter = () => {
      store.dispatch({type: 'ADD'});
-     //console.log(store.getState());
+ }
+
+ minusCounter = () => {
+     store.dispatch({type: 'MINUS'});
  }
 
   render() {
@@ -20,6 +23,13 @@ class Counter extends Component {
             }}
           >
             +1 
+          </button>
+          <button
+            onClick={()=>{
+                this.minusCounter();
+            }}
+          >
+            -1 
           </button>
       </div>
     );
