@@ -12,7 +12,7 @@ class Counter extends Component {
     return (
       <div className="Counter">
           <h3>Child Component</h3>
-          <p>Current counter is : {this.state.counter}</p>
+          <p>Current counter is : {store.getState()}</p>
           <button
             onClick={()=>{
                 this.addCounter();
